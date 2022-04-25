@@ -269,8 +269,6 @@ func (c *cache) removeLeastRecentlyAccessedItem() {
 }
 
 func (c *cache) Len() int {
-	c.mu.Lock()
-	defer c.mu.Unlock()
 	return len(c.m)
 }
 
